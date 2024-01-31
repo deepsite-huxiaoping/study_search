@@ -1,11 +1,5 @@
-<div align="center">
-<h1 align="center">Search with Lepton</h1>
-Build your own conversational search engine using less than 500 lines of code.
+# Search & Study
 <br/>
-<a href="https://search.lepton.run/" target="_blank"> Live Demo </a>
-<br/>
-<img width="645" src="https://github.com/leptonai/search_with_lepton/assets/1506722/845d7057-02cd-404e-bbc7-60f4bae89680" height="500">
-</div>
 
 
 ## Features
@@ -26,15 +20,18 @@ Build your own conversational search engine using less than 500 lines of code.
 > Running the following commands to set up them automatically.
 
 ```shell
-pip install -U leptonai && lep login
+pip install -r requirements.txt
+lep login
 ```
 
 
 ## Build
 
-1. Set Bing subscription key
+1. Set Bing subscription key in .env
+.env
 ```shell
-export BING_SEARCH_V7_SUBSCRIPTION_KEY=YOUR_BING_SUBSCRIPTION_KEY
+BACKEND=BING
+BING_SEARCH_V7_SUBSCRIPTION_KEY=xxxx
 ```
 2. Build web
 ```shell
@@ -42,7 +39,7 @@ cd web && npm install && npm run build
 ```
 3. Run server
 ```shell
-BACKEND=BING python search_with_lepton.py
+ python search_with_lepton.py
 ```
 
 
